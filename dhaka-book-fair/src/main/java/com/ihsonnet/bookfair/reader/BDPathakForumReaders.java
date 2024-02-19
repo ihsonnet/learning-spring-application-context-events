@@ -11,6 +11,13 @@ public class BDPathakForumReaders {
 
     @EventListener
     public void onProgrammingBookPublished(ProgrammingBookPublishedEvent event) {
+        System.out.println("Sleeping for 3 second Start");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Sleeping for 3 seconds End");
         System.out.println("BDPathakForumReaders - reader id ( "+readerId+ " ) is reading : Book No " + event.getBookNo() + " - " + event.getBookName());
     }
 
